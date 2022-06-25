@@ -45,6 +45,7 @@ public class Program
     int maxPrice = int.Parse(stringMaxPrice);
     
     List<Car> CarsMatchingSearch = new List<Car> (0);
+    
     foreach (Car automobile in TheCars)
     {
       if (automobile.WorthBuying(maxPrice))
