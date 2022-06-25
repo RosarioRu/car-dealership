@@ -39,11 +39,30 @@ public class Program
     amc.Miles = 198000;
 
     List<Car> TheCars = new List<Car>() {volkswagen, yugo, ford, amc};
-
+    // code to get maxPrice from user:
+    Console.WriteLine("Enter Maximum price: ");
+    string stringMaxPrice = Console.ReadLine();
+    int maxPrice = int.Parse(stringMaxPrice);
+    
+    List<Car> CarsMatchingSearch = new List<Car> (0);
     foreach (Car automobile in TheCars)
+    {
+      if (automobile.WorthBuying(maxPrice))
+      {
+        CarsMatchingSearch.Add(automobile);
+      }
+    }
+  
+    foreach (Car automobile in CarsMatchingSearch)
     {
       Console.WriteLine(automobile.MakeModel);
     }
+
+
+    // foreach (Car automobile in TheCars)
+    // {
+    //   Console.WriteLine(automobile.MakeModel);
+    // }
   }
 }
 
