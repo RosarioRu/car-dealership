@@ -14,17 +14,27 @@ namespace Dealership.Models
       _price = price;
       _miles = milage;
     }
-    
-    //below is a 'getter method':
+
+    //below are public 'getter method' that can access and return private fields.
     public string GetMakeModel()
     {
       return _makeModel;
     }
 
+    public int GetPrice()
+    {
+      return _price;
+    }
+
+    public int GetMilage()
+    {
+      return _miles;
+    }
+
     //below we add a method that will return a bool type for objects that are instances of Car:
     public bool WorthBuying (int maxPrice) //WorthBuying() method takes one argument - maxPrice
     {
-      return (Price <= maxPrice); //return true if the price is less than the maxPrice user enters, if not, return false
+      return (_price <= maxPrice); //return true if the price is less than the maxPrice user enters, if not, return false
     }
   }
 }
