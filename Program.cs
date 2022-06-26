@@ -53,7 +53,11 @@ namespace Dealership
     
       foreach (Car automobile in CarsMatchingSearch)
       {
+        Console.WriteLine("--------------");
         Console.WriteLine(automobile.GetMakeModel());
+        Console.WriteLine("Milage: " + automobile.GetMilage());
+        Console.WriteLine("$" + automobile.GetPrice());
+        
       }
       
     }
