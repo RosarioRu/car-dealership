@@ -4,9 +4,9 @@ namespace Dealership.Models
 {
   public class Car
   {
-    public string MakeModel;
-    public int Price;
-    public int Miles;
+    private string MakeModel;
+    private int Price;
+    private int Miles;
     //constructor for new instance of class named Car is below:
     public Car (string makeModel, int price, int milage)
     {
